@@ -11,7 +11,7 @@ def is_valid_imei(text: str) -> bool:
 
 def find_imei_in_text(text: str) -> list:
     """Ищет все IMEI в тексте и возвращает список чистых номеров."""
-    pattern = r"\b(\d[\s-]?){14}\d\b"
+    pattern = r"\b(?:\d[\s-]?){14}\d\b"
     matches = re.findall(pattern, text)
 
     clean_imeis = []
